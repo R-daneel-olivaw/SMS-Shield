@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:background="@drawable/month_view_today_background">
+
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:id="@+id/relativeLayout1">
+
+		<TextView android:id="@+id/registrationLable1"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:text="@string/Introdunction" android:layout_alignParentTop="true"
+			android:gravity="center_horizontal" android:textSize="13sp"
+			android:visibility="gone" ></TextView>
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/unit1">
+
+			<EditText android:layout_width="0dp" android:layout_weight="1"
+				android:id="@+id/target1" android:layout_height="wrap_content"
+				android:hint="@string/numberHint" android:layout_below="@id/registrationLable1"
+				android:maxLength="15" android:textColor="#FF0000"></EditText>
+
+			<Button android:text="@string/block" android:id="@+id/RegisterButton"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_alignParentRight="true" android:layout_toRightOf="@id/target1"
+				android:textSize="20sp" android:background="@drawable/red_button_selector"></Button>
+
+		</LinearLayout>
+
+		<Button android:text="@string/clear_list" android:id="@+id/clearButton"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true" android:layout_below="@id/unit1"
+			android:background="@drawable/white_button_selector"></Button>
+
+		<Button android:text="@string/show_blocked" android:layout_width="wrap_content"
+			android:id="@+id/buttonShow" android:layout_height="wrap_content"
+			android:layout_toRightOf="@+id/clearButton" android:layout_alignTop="@+id/clearButton"
+			android:layout_alignBottom="@+id/clearButton" android:background="@drawable/white_button_selector"></Button>
+
+	</RelativeLayout>
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:gravity="center_vertical" android:paddingTop="7dp"
+		android:paddingBottom="7dp">
+
+		<FrameLayout android:layout_height="fill_parent"
+			android:layout_width="0dp" android:layout_weight="3" android:gravity="center_vertical"
+			android:padding="3dp">
+
+			<TextView android:text="@string/identifier" android:id="@+id/number"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp" android:ellipsize="end"
+				android:textSize="15sp" android:textColor="#FFFFFF"></TextView>
+
+		</FrameLayout>
+
+		<FrameLayout android:layout_height="fill_parent"
+			android:layout_width="0dp" android:layout_weight="2" android:padding="3dp">
+
+			<TextView android:text="@string/count" android:id="@+id/blockCount"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_gravity="left" android:ellipsize="end"
+				android:textSize="15sp" android:textColor="#FFFFFF"></TextView>
+		</FrameLayout>
+
+	</LinearLayout>
+
+	<ListView android:id="@android:id/list" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:background="#00000000"
+		android:cacheColorHint="#00000000" android:focusableInTouchMode="true" />
+
+	<RelativeLayout android:id="@android:id/empty"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+		<TextView android:id="@+id/empty_text" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/welcome_black_list_is_empty"
+			android:layout_centerHorizontal="true" android:layout_marginTop="10dp"
+			android:textStyle="bold" android:textSize="20sp" />
+
+		<ImageView android:src="@drawable/sms_bouncer_banner"
+			android:layout_height="wrap_content" android:id="@+id/imageView1"
+			android:layout_width="wrap_content" android:layout_centerHorizontal="true"
+			android:layout_below="@+id/empty_text"></ImageView>
+
+	</RelativeLayout>
+
+</LinearLayout>

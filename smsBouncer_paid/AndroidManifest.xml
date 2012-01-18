@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="sms.shieldpro" android:versionName="2.0" android:versionCode="5">
+	<uses-sdk android:minSdkVersion="7" />
+	<uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
+	<uses-permission android:name="android.permission.READ_SMS"></uses-permission>
+	<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+
+	<application android:icon="@drawable/sms_bouncer_icon"
+		android:label="@string/app_name">
+		<activity android:name=".BouncerListActivity" android:label="@string/app_name"
+			android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+		<receiver android:name="sms.shieldpro.SMSListener">
+			<intent-filter android:priority="1100">
+				<!--<action android:name="android.intent.action.PHONE_STATE" /> -->
+				<action android:name="android.provider.Telephony.SMS_RECEIVED" />
+			</intent-filter>
+		</receiver>
+		<activity android:name="FirstBouncerActivity" android:label="@string/app_name"
+			android:configChanges="orientation|keyboardHidden"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="sms.message.AkshatMessageListActivity"
+			android:configChanges="orientation|keyboardHidden" android:label="@string/app_blocked_list"></activity>
+		<activity android:name="sms.message.AkshatMessageViewActivity"
+			android:configChanges="orientation|keyboardHidden"></activity>
+		<activity android:name="sms.white.WhiteListActivity"
+			android:configChanges="orientation|keyboardHidden"></activity>
+		<activity android:name="SmsPrefrenceActivity"
+			android:configChanges="orientation|keyboardHidden"></activity>
+		<activity android:name="sms.message.AkshatFocusedMessageListActivity"
+			android:configChanges="orientation|keyboardHidden"></activity>
+		<activity android:name="sms.shield.ContactsActivity.ContactsListActivity"
+			android:configChanges="orientation|keyboardHidden" android:label="@string/app_contacts_list"></activity>
+		<activity android:name="sms.inbox.SmsInboxListActivity"
+			android:configChanges="orientation|keyboardHidden" android:label="@string/app_inbox"></activity>
+		<activity android:name="sms.message.InboxMessageViewActivity"
+			android:configChanges="orientation|keyboardHidden"></activity>
+
+	</application>
+
+	<uses-permission android:name="android.permission.RECEIVE_SMS" />
+</manifest>

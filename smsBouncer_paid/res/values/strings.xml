@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="white_list">White List</string>
+	<string name="black_list">Black List</string>
+	<string name="control">Control</string>
+	<string name="block">Block</string>
+	<string name="clear_list">Clear List</string>
+	<string name="show_blocked">Show Blocked</string>
+	<string name="identifier">Identifier</string>
+	<string name="count">Count</string>
+	<string name="duplicate_entry">Duplicate Entry</string>
+	<string name="black_list_full">Black List Full</string>
+	<string name="length_should_be_at_least_2">Length should be at least 2</string>
+	<string name="yes">Yes</string>
+	<string name="no">No</string>
+	<string name="delete_entry">Delete Entry ?</string>
+	<string name="allow_sms">Allow Sms</string>
+	<string name="master_switch">Master Switch</string>
+	<string name="is_sms_bouncer_active">Is Sms Bouncer Active ?</string>
+	<string name="delete_all_entries">Delete All Entries !!</string>
+	<string name="sms_bouncer_blocked">SmsBouncer blocked :</string>
+	<string name="sms_bouncer_power_button">Sms Bouncer - Power Button</string>
+	<string name="entry_added_to_white_list">Entry added to White List</string>
+	<string name="white_list_already_full">White list already full !</string>
+	<string name="delete_blocked_message">Delete Blocked Message ?</string>
+	<string name="unable_to_add_to_white_list">Unable to add to white List !!</string>
+	<string name="entry_added_to_black_list">Entry added to Black List</string>
+	<string name="black_list_already_full">Black list already full !</string>
+	<string name="hello">Hello World, smsBouncerActivity!</string>
+	<string name="app_name">Sms Shield PRO</string>
+	<string name="numberHint">Start of Number or String</string>
+	<string name="Introdunction">Please enter the number with country code(eg. 		+91....)\nOr\nEnter name that appears in the Inbox (Case Insensitive).</string>
+	<string name="add_from_contacts">Add from Contacts</string>
+	<string name="block_from_inbox">Block From Inbox</string>
+	<string name="app_blocked_list">Sms Shield - Blocked List</string>
+	<string name="app_Settings">Sms Shield - Settings</string>
+	<string name="app_contacts_list">Sms Shield - Your Contacts..</string>
+	<string name="app_inbox">Sms Shield - Your Inbox..</string>
+	<string name="no_contacts_found">No Contacts Found !!</string>
+	<string name="inbox_is_empty">Inbox is empty..</string>
+	<string name="blocked_list_is_empty">Blocked List is empty..</string>
+	<string name="welcome_white_list_is_empty">Welcome, White List is empty..</string>
+	<string name="welcome_black_list_is_empty">Welcome, Black List is empty..</string>
+	<string name="add_sender_to_blacklist">Add Sender To Blacklist</string>
+	<string name="delete_all">Delete All</string>
+</resources>

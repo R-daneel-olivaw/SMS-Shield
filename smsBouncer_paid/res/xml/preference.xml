@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="@string/sms_bouncer_power_button">
+		<CheckBoxPreference android:key="app_active_flag"
+			android:title="@string/master_switch" android:defaultValue="true"
+			android:summary="@string/is_sms_bouncer_active" />
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="Notifications">
+		<CheckBoxPreference android:key="app_notification_flag"
+			android:title="Notification Bar" android:defaultValue="true"
+			android:summary="Do you want to be notified through the notification bar ?" />
+
+		<CheckBoxPreference android:key="app_toast_flag"
+			android:title="Pop Up Message" android:defaultValue="true"
+			android:summary="Do you want to be notified through the Pop Up Message ?" />
+	</PreferenceCategory>
+</PreferenceScreen>

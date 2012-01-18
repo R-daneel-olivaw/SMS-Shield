@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:background="#FFFFFF">
+
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:id="@+id/relativeLayout1">
+
+		<TextView android:id="@+id/registrationLable1"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:text="@string/Introdunction" android:layout_alignParentTop="true"
+			android:gravity="center_horizontal" android:textSize="13sp"
+			android:visibility="gone"> </TextView>
+
+		<EditText android:layout_width="fill_parent" android:id="@+id/target1"
+			android:layout_height="wrap_content" android:hint="@string/numberHint"
+			android:layout_below="@id/registrationLable1" android:maxLength="20"
+			android:textColor="#007700"></EditText>
+
+		<Button android:text="@string/allow_sms" android:id="@+id/RegisterButton"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_alignParentRight="true" android:layout_below="@id/target1"
+			android:textSize="20sp" android:background="@drawable/green_button_selector"></Button>
+
+		<Button android:text="@string/clear_list" android:id="@+id/clearButton"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true" android:layout_below="@id/target1"
+			android:background="@drawable/white_button_selector"></Button>
+
+		<!-- <Button android:text="Show Blocked" android:layout_width="wrap_content" 
+			android:id="@+id/buttonShow" android:layout_height="wrap_content" android:layout_toRightOf="@+id/clearButton" 
+			android:layout_alignTop="@+id/clearButton" android:layout_alignBottom="@+id/clearButton"></Button> -->
+
+	</RelativeLayout>
+
+	<ListView android:id="@android:id/list" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:background="#00000000"
+		android:cacheColorHint="#00000000" android:focusableInTouchMode="true" />
+
+	<RelativeLayout android:id="@android:id/empty"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+		<TextView android:id="@+id/empty_text" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/welcome_white_list_is_empty"
+			android:layout_centerHorizontal="true" android:layout_marginTop="10dp"
+			android:textStyle="bold" android:textSize="20sp" />
+
+		<ImageView android:src="@drawable/sms_bouncer_banner_w"
+			android:layout_height="wrap_content" android:id="@+id/imageView1"
+			android:layout_width="wrap_content" android:layout_centerHorizontal="true"
+			android:layout_below="@+id/empty_text"></ImageView>
+
+	</RelativeLayout>
+
+</LinearLayout>
